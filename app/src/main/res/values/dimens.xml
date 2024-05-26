@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="game_grid_padding">32dp</dimen>
+    <dimen name="game_grid_vertical_spacing">8dp</dimen>
+    <dimen name="game_grid_horizontal_spacing">8dp</dimen>
+    <dimen name="game_restart_button_text_padding">8dp</dimen>
+    <dimen name="game_box_corner_radius_size">16dp</dimen>
+    <dimen name="game_box_player_icon_size">64dp</dimen>
+</resources>
