@@ -13,5 +13,9 @@ interface TicTacToeAi {
      * @param gameMatrix The current state of the game board.
      * @param player The current player.
      */
-    suspend fun generateMove(gameMatrix: String, player: Player): Int?
+    suspend fun generateMove(
+        gameMatrix: String,
+        player: Player,
+        availablePositions: List<Int>
+    ): Int?
 }

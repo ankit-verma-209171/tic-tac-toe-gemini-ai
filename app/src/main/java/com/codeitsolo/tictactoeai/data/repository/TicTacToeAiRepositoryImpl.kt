@@ -16,16 +16,19 @@ class TicTacToeAiRepositoryImpl @Inject constructor(
         player: Player
     ): Int? = ai.generateMove(
         gameMatrix = gameBoard.getGameMatrix(),
-        player = player
+        player = player,
+        availablePositions = gameBoard
+            .filter { it.value == null }
+            .map { it.key }
     )
 
     /**
      * Create game matrix from the game board
      */
     private fun Map<Int, Player?>.getGameMatrix(): String = buildString {
-        this@getGameMatrix.forEach { (index, player) ->
-            append("[$index] -> ${player.toString()}\n")
-        }
+        append("[")
+        append(this@getGameMatrix.values.joinToString(separator = ", ") { it.toString() })
+        append("]")
     }
 
     /**

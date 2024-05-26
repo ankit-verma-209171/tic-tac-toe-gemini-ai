@@ -1,6 +1,5 @@
 package com.codeitsolo.tictactoeai.presentation
 
-import androidx.core.graphics.component1
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.codeitsolo.tictactoeai.data.model.GameState
@@ -81,7 +80,7 @@ class TicTacToeViewModel @Inject constructor(
     private suspend fun aiMove() {
         if (_uiState.value.gameState != GameState.Playing) return
 
-        val (aiPosition, ) = ticTacToeAiRepository.getAiMoveForGameBoard(
+        val aiPosition = ticTacToeAiRepository.getAiMoveForGameBoard(
             gameBoard = _uiState.value.gameBoard,
             player = _uiState.value.player
         ) ?: run {
